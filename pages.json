@@ -1,0 +1,166 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"h5": {
+					"titleNView": {
+						"titleText": "首页",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "首页",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				},
+				"navigationBarBackgroundColor":"#4cd964",
+				// "navigationBarTitleText": "首页",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				}
+			}
+		},
+		{
+			"path": "pages/classify/classify",
+			"style": {
+				"navigationBarBackgroundColor":"#4cd964",
+				"navigationBarTitleText": "分类",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				},
+				"h5": {
+					"titleNView": {
+						"titleText": "分类",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "分类",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarBackgroundColor":"#4cd964",
+				"navigationBarTitleText": "设置",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				},
+				"h5": {
+					"titleNView": {
+						"titleText": "设置",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "设置",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"h5": {
+					"titleNView": {
+						"searchInput": {
+							"autoFocus": true,
+							"placeholder": "请输入搜索参数",
+							"backgroundColor": "#ffffff"
+						}
+					}
+				},
+				"app-plus": {
+					"titleNView": {
+						"searchInput": {
+							"autoFocus": true,
+							"placeholder": "请输入搜索参数",
+							"backgroundColor": "#ffffff"
+						}
+					}
+				}
+			}
+		}
+
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#EEEEEE",
+		"fontSize": "15",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icon/_home.png",
+				"selectedIconPath": "static/icon/home.png",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/classify/classify",
+				"iconPath": "static/icon/_img.png",
+				"selectedIconPath": "static/icon/img.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/setting/setting",
+				"iconPath": "static/icon/_videocamera.png",
+				"selectedIconPath": "static/icon/videocamera.png",
+				"text": "设置"
+			}
+		]
+	}
+}
