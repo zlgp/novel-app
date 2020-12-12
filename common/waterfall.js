@@ -7,8 +7,7 @@ class Water {
 	}
 	getRecommendList() {
 		this.self.request('post', this.url).then(res => {
-			this.recommendList = res.recommandlist||res.online
-			console.log(this.recommendList);
+			this.recommendList = res.recommandlist||res.online||res.boy.remommand
 			this.addRandomData()
 		})
 

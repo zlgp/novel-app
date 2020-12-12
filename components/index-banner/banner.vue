@@ -24,7 +24,9 @@
 				})
 			},
 			goDetail(index){
-				console.log(this.bannerList[index].id);
+				uni.navigateTo({
+					url:`../../pages/detail/detail?id=${this.bannerList[index].id}`
+				})
 			}
 		}
 	}

@@ -31,7 +31,9 @@
 </template>
 
 <script>
-	import {Water} from "../../common/waterfall.js"
+	import {
+		Water
+	} from "../../common/waterfall.js"
 	export default {
 		data() {
 			return {
@@ -40,7 +42,7 @@
 			}
 		},
 		mounted() {
-			let recommend=new Water("/get/recommand",this.flowList,this.recommendList,this)
+			let recommend = new Water("/get/recommand", this.flowList, this.recommendList, this)
 			recommend.getRecommendList()
 			// this.getRecommendList()
 		},

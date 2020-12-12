@@ -4,6 +4,41 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/read/read",
+			"style": {
+				"h5": {
+					"titleNView": {
+						"titleText": "阅读",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "阅读",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				},
+				"navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "首页",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				}
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"h5": {
@@ -31,7 +66,7 @@
 						]
 					}
 				},
-				"navigationBarBackgroundColor":"#4cd964",
+				"navigationBarBackgroundColor": "#4cd964",
 				// "navigationBarTitleText": "首页",
 				"navigationBarShadow": {
 					"colorType": "grey"
@@ -39,9 +74,44 @@
 			}
 		},
 		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarBackgroundColor": "#4cd964",
+				"navigationBarTitleText": "详情",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				},
+				"h5": {
+					"titleNView": {
+						"titleText": "详情",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "详情",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				}
+			}
+		},
+		{
 			"path": "pages/classify/classify",
 			"style": {
-				"navigationBarBackgroundColor":"#4cd964",
+				"navigationBarBackgroundColor": "#4cd964",
 				"navigationBarTitleText": "分类",
 				"navigationBarShadow": {
 					"colorType": "grey"
@@ -76,7 +146,7 @@
 		{
 			"path": "pages/setting/setting",
 			"style": {
-				"navigationBarBackgroundColor":"#4cd964",
+				"navigationBarBackgroundColor": "#4cd964",
 				"navigationBarTitleText": "设置",
 				"navigationBarShadow": {
 					"colorType": "grey"
