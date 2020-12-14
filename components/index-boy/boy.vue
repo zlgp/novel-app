@@ -19,7 +19,7 @@
 				</view>
 			</template>
 			<template v-slot:right="{rightList}">
-				<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @click="goDetail(item.id)">
+				<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
 					<Detail :book_id="item.id">
 						<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
 						<view class="demo-title">
