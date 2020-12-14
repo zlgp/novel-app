@@ -174,7 +174,7 @@
 				}
 			},
 			// 根据条件获取
-			 getCondition() {
+			getCondition() {
 				this.request('post', '/search/condition', { ...this.params
 				}).then(res => {
 					this.conditionList = res.books
@@ -205,6 +205,7 @@
 			display: flex;
 			margin-top: 20rpx;
 
+
 			.classify-item-name {
 				width: 100rpx;
 			}
@@ -214,6 +215,9 @@
 				display: flex;
 				flex-wrap: wrap;
 
+				.u-tag {
+					margin: 0 10rpx 20rpx 0;
+				}
 			}
 		}
 
