@@ -2,30 +2,33 @@
 	<view class="boy">
 		<u-waterfall v-model="flowList" ref="uWaterfall">
 			<template v-slot:left="{leftList}">
-				<view class="demo-warter" v-for="(item, index) in leftList" :key="index" @click="goDetail(item.id)">
-					<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
-					<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
-					<view class="demo-title">
-						{{item.title}}
-					</view>
-					<view class="demo-price">
-						{{item.author}}
-					</view>
-					<!-- <view class="demo-shop">
+				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
+					<Detail :book_id="item.id">
+						<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
+						<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
+						<view class="demo-title">
+							{{item.title}}
+						</view>
+						<view class="demo-price">
+							{{item.author}}
+						</view>
+						<!-- <view class="demo-shop">
 						{{item.descript}}
 					</view> -->
-
+					</Detail>
 				</view>
 			</template>
 			<template v-slot:right="{rightList}">
 				<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @click="goDetail(item.id)">
-					<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
-					<view class="demo-title">
-						{{item.title}}
-					</view>
-					<view class="demo-price">
-						{{item.author}}
-					</view>
+					<Detail :book_id="item.id">
+						<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
+						<view class="demo-title">
+							{{item.title}}
+						</view>
+						<view class="demo-price">
+							{{item.author}}
+						</view>
+					</Detail>
 					<!-- 	<view class="demo-shop">
 						{{item.descript}}
 					</view> -->
@@ -64,19 +67,21 @@
 			recommend.getRecommendList()
 			// 获取分类
 			// this.getCatogory()
-			let user=new User("/get/channel",this,this.catogoryList)
+			let user = new User("/get/channel", this, this.catogoryList)
 			user.getCatogoryList()
 		},
 		methods: {
-			goDetail(id) {
-				console.log(id);
-			},
 			// 获取分类
 			// getCatogory() {
 			// 	this.request('post', '/get/channel').then(res => {
 			// 		this.catogoryList = res.boy.catogory
 			// 	})
 			// }
+			goDetail(id) {
+				uni.navigateTo({
+					url: `../../pages/detail/detail?id=${id}`
+				})
+			}
 
 		}
 	}

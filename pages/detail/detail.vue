@@ -19,13 +19,14 @@
 				</view>
 			</view>
 			<view class="detail-foot" slot="foot">
-				<u-button :ripple="true" ripple-bg-color="#909399" size="medium" type="success" shape="square"> 开始阅读</u-button>
+				<u-button :ripple="true" ripple-bg-color="#909399" size="medium" type="success" shape="square" @click="handleRead">
+					开始阅读</u-button>
 			</view>
 		</u-card>
 
 		<view class="">
 			<u-cell-group title="章节">
-				<u-cell-item v-for="(value,index) in list" :key="index" :title="value.title" :value="'第'+value.chapter+'章'"></u-cell-item>
+				<u-cell-item v-for="(value,index) in list" :key="index" :title="value.title" :value="'第'+value.chapter+'章'" @click="handleChapterRead(value.chapter)"></u-cell-item>
 			</u-cell-group>
 			<u-loadmore :status="status" />
 		</view>
@@ -94,6 +95,17 @@
 					this.list = res.chapter_list.slice(this.start, this.limit)
 				})
 			},
+			handleRead() {
+				// 开始阅读
+				uni.navigateTo({
+					url: `../read/read?chapter_id=${1}&&book_id=${this.detaliMsg.id}`
+				})
+			},
+			handleChapterRead(chapter_id) {
+				uni.navigateTo({
+					url: `../read/read?chapter_id=${chapter_id}&&book_id=${this.detaliMsg.id}`
+				})
+			}
 		}
 
 	}

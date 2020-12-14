@@ -2,38 +2,42 @@
 	<view class="online">
 		<u-waterfall v-model="flowList" ref="uWaterfall">
 			<template v-slot:left="{leftList}">
-				<view class="demo-warter" v-for="(item, index) in leftList" :key="index" @click="goDetail(item.id)">
+				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
 					<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
-					<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
-					<view class="demo-title">
-						{{item.title}}
-					</view>
-					<view class="demo-price">
-						{{item.author}}
-					</view>
-					<!-- <view class="demo-shop">
+					<Detail :book_id="item.id">
+						<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
+						<view class="demo-title">
+							{{item.title}}
+						</view>
+						<view class="demo-price">
+							{{item.author}}
+						</view>
+						<!-- <view class="demo-shop">
 						{{item.descript}}
 					</view> -->
-					<view class="">
-						<u-rate v-model="item.scroe"></u-rate>
-					</view>
+						<view class="">
+							<u-rate v-model="item.scroe"></u-rate>
+						</view>
+					</Detail>
 				</view>
 			</template>
 			<template v-slot:right="{rightList}">
-				<view class="demo-warter" v-for="(item, index) in rightList" :key="index" @click="goDetail(item.id)">
-					<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
-					<view class="demo-title">
-						{{item.title}}
-					</view>
-					<view class="demo-price">
-						{{item.author}}
-					</view>
-				<!-- 	<view class="demo-shop">
+				<view class="demo-warter" v-for="(item, index) in rightList" :key="index">
+					<Detail :book_id="item.id">
+						<u-lazy-load threshold="-450" border-radius="10" :image="item.cover" :index="item.id"></u-lazy-load>
+						<view class="demo-title">
+							{{item.title}}
+						</view>
+						<view class="demo-price">
+							{{item.author}}
+						</view>
+						<!-- 	<view class="demo-shop">
 						{{item.descript}}
 					</view> -->
-					<view class="">
-						<u-rate v-model="item.scroe"></u-rate>
-					</view>
+						<view class="">
+							<u-rate v-model="item.scroe"></u-rate>
+						</view>
+					</Detail>
 				</view>
 			</template>
 		</u-waterfall>
@@ -59,10 +63,7 @@
 			recommend.getRecommendList()
 		},
 		methods: {
-			goDetail(id) {
-				console.log(id);
-
-			}
+		
 
 		}
 	}
@@ -133,6 +134,6 @@
 		font-size: 22rpx;
 		color: $u-tips-color;
 		margin-top: 5px;
-	
+
 	}
 </style>

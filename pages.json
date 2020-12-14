@@ -4,41 +4,6 @@
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/read/read",
-			"style": {
-				"h5": {
-					"titleNView": {
-						"titleText": "阅读",
-						"buttons": [{
-								"type": "none",
-								"fontSrc": "/static/iconfont/iconfont.ttf",
-								"text": "\ue600"
-							}
-
-						]
-					}
-
-				},
-				"app-plus": {
-					"titleNView": {
-						"titleText": "阅读",
-						"buttons": [{
-								"type": "none",
-								"fontSrc": "/static/iconfont/iconfont.ttf",
-								"text": "\ue600"
-							}
-
-						]
-					}
-				},
-				"navigationBarBackgroundColor": "#4cd964",
-				// "navigationBarTitleText": "首页",
-				"navigationBarShadow": {
-					"colorType": "grey"
-				}
-			}
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
 				"h5": {
@@ -65,22 +30,58 @@
 
 						]
 					}
-				},
-				"navigationBarBackgroundColor": "#4cd964",
-				// "navigationBarTitleText": "首页",
-				"navigationBarShadow": {
-					"colorType": "grey"
 				}
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "首页",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// }
+			}
+		},
+		{
+			"path": "pages/read/read",
+			"style": {
+				// "navigationStyle":"custom",
+				"h5": {
+					"titleNView": {
+						"titleText": "阅读",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "阅读",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				}
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "首页",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// }
 			}
 		},
 		{
 			"path": "pages/detail/detail",
 			"style": {
-				"navigationBarBackgroundColor": "#4cd964",
-				"navigationBarTitleText": "详情",
-				"navigationBarShadow": {
-					"colorType": "grey"
-				},
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "详情",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// },
 				"h5": {
 					"titleNView": {
 						"titleText": "详情",
@@ -111,11 +112,11 @@
 		{
 			"path": "pages/classify/classify",
 			"style": {
-				"navigationBarBackgroundColor": "#4cd964",
-				"navigationBarTitleText": "分类",
-				"navigationBarShadow": {
-					"colorType": "grey"
-				},
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "分类",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// },
 				"h5": {
 					"titleNView": {
 						"titleText": "分类",
@@ -146,14 +147,14 @@
 		{
 			"path": "pages/setting/setting",
 			"style": {
-				"navigationBarBackgroundColor": "#4cd964",
-				"navigationBarTitleText": "设置",
-				"navigationBarShadow": {
-					"colorType": "grey"
-				},
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "个人中心",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// },
 				"h5": {
 					"titleNView": {
-						"titleText": "设置",
+						"titleText": "个人中心",
 						"buttons": [{
 								"type": "none",
 								"fontSrc": "/static/iconfont/iconfont.ttf",
@@ -166,7 +167,7 @@
 				},
 				"app-plus": {
 					"titleNView": {
-						"titleText": "设置",
+						"titleText": "个人中心",
 						"buttons": [{
 								"type": "none",
 								"fontSrc": "/static/iconfont/iconfont.ttf",
@@ -184,7 +185,8 @@
 				"h5": {
 					"titleNView": {
 						"searchInput": {
-							"autoFocus": true,
+							"autoFocus": false,
+							"align": "left",
 							"placeholder": "请输入搜索参数",
 							"backgroundColor": "#ffffff"
 						}
@@ -193,7 +195,8 @@
 				"app-plus": {
 					"titleNView": {
 						"searchInput": {
-							"autoFocus": true,
+							"autoFocus": false,
+							"align": "left",
 							"placeholder": "请输入搜索参数",
 							"backgroundColor": "#ffffff"
 						}
@@ -212,7 +215,7 @@
 		"color": "#7A7E83",
 		"selectedColor": "#3cc51f",
 		"borderStyle": "black",
-		"backgroundColor": "#EEEEEE",
+		"backgroundColor": "#F8F8F8",
 		"fontSize": "15",
 		"list": [{
 				"pagePath": "pages/index/index",

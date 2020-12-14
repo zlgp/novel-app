@@ -4,9 +4,9 @@
 		 @change="tabChange" font-size="35" :offset="[5, 0]" :height="100"></u-tabs>
 		<banner></banner>
 		<view class="content">
-			<keep-alive>
+			<!-- <keep-alive> -->
 				<component :is="currentView"></component>
-			</keep-alive>
+		<!-- 	</keep-alive> -->
 		</view>
 	</view>
 </template>
