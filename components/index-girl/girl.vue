@@ -39,7 +39,7 @@
 		</u-waterfall>
 		<view class="" v-for="(item,index) in catogoryList" :key="index">
 			<u-cell-group :title="item[0].category">
-				<u-cell-item v-for="(value,index) in item" :key="value.id" :title="value.name" :value="value.author" @click="goDetail(value.id)"></u-cell-item>
+				<u-cell-item v-for="(value,index) in item" :key="index" :title="value.name" :value="value.author" @click="goDetail(value.id)"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>

@@ -129,7 +129,6 @@
 
 			// 模拟数据加载
 			setTimeout(() => {
-
 				if (this.params.page >= this.total_page) {
 					this.status = 'nomore';
 				} else {
@@ -155,20 +154,24 @@
 				switch (name) {
 					case '频道':
 						this.params.girl = param
+						// 先请空
+						await this.clear()
+						// 再渲染
 						await this.getCondition()
 						break;
 					case '分类':
 						this.params.category = [...this.params.category, param]
+						await this.clear()
 						await this.getCondition()
 						break;
 					case '年份':
 						this.params.year = param
-
+						await this.clear()
 						await this.getCondition()
 						break;
 					case '进度':
 						this.params.is_end = param
-
+						await this.clear()
 						await this.getCondition()
 						break;
 				}
@@ -189,10 +192,10 @@
 					let item = JSON.parse(JSON.stringify(this.conditionList[i]))
 					this.flowList.push(item);
 				}
-
-
-
 			},
+			clear() {
+				this.$refs.uWaterfall.clear();
+			}
 		}
 	}
 </script>
