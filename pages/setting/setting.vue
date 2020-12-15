@@ -47,7 +47,12 @@
 			return {
 				src: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg'
 			}
-		}
+		},
+		onNavigationBarButtonTap(e) {
+			uni.navigateTo({
+				url: "../search/search"
+			})
+		},
 	}
 </script>
 

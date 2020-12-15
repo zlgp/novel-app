@@ -4551,7 +4551,7 @@ var render = function() {
     [
       _c(
         "v-uni-view",
-        { attrs: { _i: 1 } },
+        { class: _vm._$g(1, "c"), attrs: { _i: 1 } },
         [
           _c(
             "v-uni-view",
@@ -4577,6 +4577,7 @@ var render = function() {
           ),
           _c("v-uni-view", {
             staticClass: _vm._$g(6, "sc"),
+            class: _vm._$g(6, "c"),
             attrs: { id: "read-content", _i: 6 },
             domProps: { innerHTML: _vm._s(_vm._$g(6, "v-html")) },
             on: {
@@ -5567,7 +5568,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../360Downloads/Software/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.read[data-v-1126b716] {\r\n  padding: 0rpx 30rpx;\n}\n.read[data-v-1126b716] .read-content {\r\n  line-height: 60rpx;\r\n  font-size: 35rpx;\n}\n.read .read-msg[data-v-1126b716] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  margin-top: 30rpx;\r\n  margin-bottom: 30rpx;\n}\n.read .read-msg .name[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #4bcacc;\n}\n.read .read-msg .title[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #86898f;\n}\n.read .read-msg .chapter[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #86898f;\n}\n.read .catalog-msg[data-v-1126b716] {\r\n  border-bottom: 2rpx solid #4CD964;\r\n  height: 100rpx;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.read .CatalogList-title[data-v-1126b716] {\r\n  padding: 0 30rpx 16rpx 30rpx;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n  -webkit-justify-content: space-between;\r\n          justify-content: space-between;\r\n  font-size: 30rpx;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.read[data-v-1126b716] {\r\n  padding: 0rpx 30rpx;\n}\n.read[data-v-1126b716] .read-content {\r\n  line-height: 60rpx;\r\n  font-size: 35rpx;\n}\n.read .read-msg[data-v-1126b716] {\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-justify-content: space-around;\r\n          justify-content: space-around;\r\n  margin-top: 30rpx;\r\n  margin-bottom: 30rpx;\n}\n.read .read-msg .name[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #4bcacc;\n}\n.read .read-msg .title[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #86898f;\n}\n.read .read-msg .chapter[data-v-1126b716] {\r\n  font-size: 25rpx;\r\n  font-weight: 400;\r\n  color: #86898f;\n}\n.read .catalog-msg[data-v-1126b716] {\r\n  border-bottom: 2rpx solid #4CD964;\r\n  height: 100rpx;\r\n  -webkit-box-align: center;\r\n  -webkit-align-items: center;\r\n          align-items: center;\n}\n.read .CatalogList-title[data-v-1126b716] {\r\n  padding: 0 30rpx 16rpx 30rpx;\r\n  display: -webkit-box;\r\n  display: -webkit-flex;\r\n  display: flex;\r\n  -webkit-box-pack: justify;\r\n  -webkit-justify-content: space-between;\r\n          justify-content: space-between;\r\n  font-size: 30rpx;\n}\n.read .active[data-v-1126b716] {\r\n  background-color: #000 !important;\r\n  color: #fff !important;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

@@ -1,6 +1,6 @@
 <template>
 	<view class="read" id="read">
-		<view class="">
+		<view :class="current?'active':''">
 			<view class="read-msg">
 				<text class="name">
 					书名:{{bookMsg.name}}
@@ -13,7 +13,8 @@
 				<view class="" v-html="bookMsg.content"></view>
 			</swiper-item>
 		</swiper> -->
-			<view class="read-content" id="read-content" v-html="bookMsg.content" @touchstart="handleStart" @touchend="handleEnd"></view>
+			<view class="read-content" id="read-content" v-html="bookMsg.content" @touchstart="handleStart" @touchend="handleEnd"
+			 :class="current?'active':''"></view>
 		</view>
 		<!-- 底部导航栏 -->
 		<u-tabbar v-model="currentTabbar" :list="list" :show="showTabbar" @change="changeTabbar"></u-tabbar>
@@ -90,6 +91,7 @@
 				showPopup: false,
 				// changMode: false,
 				showRank: true,
+				current: false,
 			}
 		},
 		async onLoad(option) {
@@ -99,7 +101,11 @@
 			await this.getBook()
 			// 获取book的全部目录
 			await this.getBookCatalog()
-
+		},
+		onNavigationBarButtonTap(e) {
+			uni.navigateTo({
+				url: "../search/search"
+			})
 		},
 		methods: {
 			getBook() {
@@ -143,7 +149,12 @@
 					if (this.chapter_id != 1) {
 						this.chapter_id -= 1
 						this.getBook()
+						uni.pageScrollTo({
+							scrollTop: 0,
+							duration: 300
+						});
 					}
+
 
 
 				} else if (subX < -100) {
@@ -151,6 +162,10 @@
 					if (this.chapter_id != this.CatalogList.length) {
 						this.chapter_id += 1
 						this.getBook()
+						uni.pageScrollTo({
+							scrollTop: 0,
+							duration: 300
+						});
 					}
 
 				} else {
@@ -178,16 +193,14 @@
 						this.showPopup = true
 						break;
 					case 1:
-						// this.changMode = !this.changMode
-						// if (this.changMode == false) {
-						// 	let content = document.getElementById('read')
-						// 	content.style.backgroundColor = "#FFFFFF"
-						// 	content.style.color = "#000000"
-						// } else {
-						// 	let content = document.getElementById('read')
-						// 	content.style.backgroundColor = "#000000"
-						// 	content.style.color = "#FFFFFF"
-						// }
+						this.changMode = !this.changMode
+						if (this.changMode == false) {
+							this.current = false
+							this.list[1].text = "夜间"
+						} else {
+							this.current = true
+							this.list[1].text = "白天"
+						}
 						break;
 				}
 			},
@@ -261,6 +274,12 @@
 			display: flex;
 			justify-content: space-between;
 			font-size: 30rpx;
+		}
+
+		.active {
+			background-color: #000 !important;
+			color: #fff !important;
+
 		}
 	}
 </style>
