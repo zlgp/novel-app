@@ -1,7 +1,7 @@
 <template>
 	<view class="index">
-		<u-tabs name="cate_name" count="cate_count" bar-height="6" bar-width="80" :list="list" :is-scroll="false" :current="current"
-		 @change="tabChange" font-size="35" :offset="[5, 0]" :height="100"></u-tabs>
+		<u-tabs name="cate_name" count="cate_count" bar-height="6" :list="list" :is-scroll="false" :current="current"
+		 @change="tabChange" font-size="35" :offset="[5, 0]" :height="100" :show-bar="false"></u-tabs>
 		<banner></banner>
 		<view class="content">
 			<!-- <keep-alive> -->

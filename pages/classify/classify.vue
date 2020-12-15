@@ -126,7 +126,6 @@
 		},
 		onReachBottom() {
 			this.status = 'loading';
-
 			// 模拟数据加载
 			setTimeout(() => {
 				if (this.params.page >= this.total_page) {
