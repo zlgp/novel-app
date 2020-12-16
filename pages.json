@@ -52,7 +52,7 @@
 							}
 
 						]
-					
+
 					}
 
 				},
@@ -204,6 +204,15 @@
 					}
 				}
 			}
+		},
+		{
+			"path": "pages/scan/scan",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
 		}
 
 	],

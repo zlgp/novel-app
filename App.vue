@@ -19,6 +19,7 @@
 			// // 事件处理
 			// plus.push.addEventListener('click', _handlePush)
 			// plus.push.addEventListener('receive', _handlePush)
+			// #ifdef APP-PLUS
 			let timer = false;
 			plus.push.addEventListener("click", (msg) => {
 				// 防抖
@@ -43,6 +44,7 @@
 					}
 				}
 			}, false)
+			// #endif
 		},
 
 
