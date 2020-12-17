@@ -7768,7 +7768,7 @@ var render = function() {
           _c(
             "v-uni-view",
             { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } },
-            [_vm._v("liao")]
+            [_vm._v(_vm._$g(3, "t0-0"))]
           )
         ],
         1
@@ -7888,13 +7888,35 @@ var render = function() {
                     return _vm.$handleViewEvent($event)
                   }
                 }
+              }),
+              _c("u-cell-item", {
+                attrs: { _i: 28 },
+                on: {
+                  click: function($event) {
+                    return _vm.$handleViewEvent($event)
+                  }
+                }
               })
             ],
             1
           )
         ],
         1
-      )
+      ),
+      _vm._$g(29, "i")
+        ? _c(
+            "v-uni-button",
+            {
+              attrs: { type: "default", _i: 29 },
+              on: {
+                click: function($event) {
+                  return _vm.$handleViewEvent($event)
+                }
+              }
+            },
+            [_vm._v("退出登陆")]
+          )
+        : _vm._e()
     ],
     1
   )

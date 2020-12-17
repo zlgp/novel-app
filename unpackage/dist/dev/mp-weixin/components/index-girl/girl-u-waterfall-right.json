@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "girl-u-waterfall-left": "/components/index-girl/girl-u-waterfall-left",
+    "girl-u-waterfall-right": "/components/index-girl/girl-u-waterfall-right",
+    "u-waterfall": "/node-modules/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/node-modules/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item"
+  }
+}

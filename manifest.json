@@ -18,7 +18,8 @@
         },
         /* 模块配置 */
         "modules" : {
-            "Push" : {}
+            "Push" : {},
+            "OAuth" : {}
         },
         /* 应用发布信息 */
         "distribute" : {
@@ -56,7 +57,9 @@
                 "ad" : {},
                 "push" : {
                     "unipush" : {}
-                }
+                },
+                "share" : {},
+                "oauth" : {}
             },
             "icons" : {
                 "android" : {

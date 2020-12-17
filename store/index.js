@@ -14,12 +14,15 @@ const store = new Vuex.Store({
 		login(state, provider) {
 			state.hasLogin = true
 			state.uerInfo.token = provider.token
+			state.uerInfo.userName = provider.user_name
+			state.uerInfo.nickName=provider.nickName
+			state.uerInfo.avatarUrl=provider.avatarUrl
 			uni.setStorage({
 				key: 'uerInfo',
 				data: provider
 			})
 		},
-		logout(state) {
+		loginout(state) {
 			state.hasLogin = false
 			state.uerInfo = {}
 			uni.removeStorage({

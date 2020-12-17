@@ -1,12 +1,12 @@
 <template>
 	<view class="index">
-		<u-tabs name="cate_name" count="cate_count" bar-height="6" :list="list" :is-scroll="false" :current="current"
-		 @change="tabChange" font-size="35" :offset="[5, 0]" :height="100" :show-bar="false"></u-tabs>
+		<u-tabs name="cate_name" count="cate_count" bar-height="6" :list="list" :is-scroll="false" :current="current" @change="tabChange"
+		 font-size="35" :offset="[5, 0]" :height="100" :show-bar="false"></u-tabs>
 		<banner></banner>
 		<view class="content">
 			<!-- <keep-alive> -->
-				<component :is="currentView"></component>
-		<!-- 	</keep-alive> -->
+			<component :is="currentView"></component>
+			<!-- 	</keep-alive> -->
 		</view>
 	</view>
 </template>
@@ -17,6 +17,9 @@
 	import recommend from "@/components/index-rocommend/recommend.vue"
 	import girl from "@/components/index-girl/girl.vue"
 	import online from "@/components/index-new-online/online.vue"
+	import {
+		mapState
+	} from "vuex"
 	export default {
 		components: {
 			com0: recommend,
@@ -52,12 +55,14 @@
 		onLoad() {
 
 		},
+
 		methods: {
 			tabChange(index) {
 				this.current = index;
 				this.currentView = "com" + index
 			}
 		},
+		computed: mapState(['hasLogin', 'uerInfo']),
 
 	}
 </script>

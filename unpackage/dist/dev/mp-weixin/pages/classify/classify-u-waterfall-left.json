@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "classify-u-waterfall-left": "/pages/classify/classify-u-waterfall-left",
+    "classify-u-waterfall-right": "/pages/classify/classify-u-waterfall-right",
+    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag",
+    "u-waterfall": "/node-modules/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/node-modules/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-loadmore": "/node-modules/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

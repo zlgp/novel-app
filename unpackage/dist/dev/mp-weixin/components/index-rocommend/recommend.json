@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "recommend-u-waterfall-left": "/components/index-rocommend/recommend-u-waterfall-left",
+    "recommend-u-waterfall-right": "/components/index-rocommend/recommend-u-waterfall-right",
+    "u-waterfall": "/node-modules/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/node-modules/uview-ui/components/u-lazy-load/u-lazy-load"
+  },
+  "component": true
+}

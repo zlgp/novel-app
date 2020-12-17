@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "com0": "/components/index-rocommend/recommend",
+    "com1": "/components/index-boy/boy",
+    "com2": "/components/index-girl/girl",
+    "com3": "/components/index-new-online/online",
+    "banner": "/components/index-banner/banner"
+  }
+}

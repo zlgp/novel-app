@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-badge": "/node-modules/uview-ui/components/u-badge/u-badge",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item",
+    "u-loadmore": "/node-modules/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "online-u-waterfall-left": "/components/index-new-online/online-u-waterfall-left",
+    "online-u-waterfall-right": "/components/index-new-online/online-u-waterfall-right",
+    "u-waterfall": "/node-modules/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/node-modules/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-rate": "/node-modules/uview-ui/components/u-rate/u-rate"
+  },
+  "component": true
+}
