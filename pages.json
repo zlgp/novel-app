@@ -39,6 +39,41 @@
 			}
 		},
 		{
+			"path": "pages/live/live",
+			"style": {
+				"h5": {
+					"titleNView": {
+						"titleText": "直播",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "直播",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+
+						]
+					}
+				}
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "首页",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// }
+			}
+		},
+		{
 			"path": "pages/read/read",
 			"style": {
 				// "navigationStyle":"custom",

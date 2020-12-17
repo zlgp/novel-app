@@ -62,7 +62,6 @@
 				this.currentView = "com" + index
 			}
 		},
-		computed: mapState(['hasLogin', 'uerInfo']),
 
 	}
 </script>

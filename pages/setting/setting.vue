@@ -37,6 +37,7 @@
 				<u-cell-item icon="moments" title="扫一扫" @click="handleScan"></u-cell-item>
 				<u-cell-item icon="integral-fill" title="分享" @click="handleShare"></u-cell-item>
 				<u-cell-item icon="integral-fill" title="微信登陆" @click="handlelogin"></u-cell-item>
+				<u-cell-item icon="integral-fill" title="观看直播" @click="handleLive"></u-cell-item>
 			</u-cell-group>
 		</view>
 		<button type="default" @click="handleLoginOut" v-if="hasLogin!=false">退出登陆</button>
@@ -144,7 +145,11 @@
 					}
 				});
 			},
-
+			handleLive() {
+              uni.navigateTo({
+              	url:"../live/live"
+              })
+			},
 			...mapMutations(['login', 'loginout'])
 
 		},
