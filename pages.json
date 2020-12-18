@@ -74,6 +74,41 @@
 			}
 		},
 		{
+			"path": "pages/pusher/pusher",
+			"style": {
+				"h5": {
+					"titleNView": {
+						"titleText": "推流",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+		
+						]
+					}
+		
+				},
+				"app-plus": {
+					"titleNView": {
+						"titleText": "推流",
+						"buttons": [{
+								"type": "none",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"text": "\ue600"
+							}
+		
+						]
+					}
+				}
+				// "navigationBarBackgroundColor": "#4cd964",
+				// "navigationBarTitleText": "首页",
+				// "navigationBarShadow": {
+				// 	"colorType": "grey"
+				// }
+			}
+		},
+		{
 			"path": "pages/read/read",
 			"style": {
 				// "navigationStyle":"custom",

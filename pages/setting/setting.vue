@@ -37,7 +37,9 @@
 				<u-cell-item icon="moments" title="扫一扫" @click="handleScan"></u-cell-item>
 				<u-cell-item icon="integral-fill" title="分享" @click="handleShare"></u-cell-item>
 				<u-cell-item icon="integral-fill" title="微信登陆" @click="handlelogin"></u-cell-item>
+				<u-cell-item icon="integral-fill" title="直播推流" @click="handlePusher"></u-cell-item>
 				<u-cell-item icon="integral-fill" title="观看直播" @click="handleLive"></u-cell-item>
+				<u-cell-item icon="integral-fill" title="选择登陆" @click="handlechooseLogin"></u-cell-item>
 			</u-cell-group>
 		</view>
 		<button type="default" @click="handleLoginOut" v-if="hasLogin!=false">退出登陆</button>
@@ -45,6 +47,10 @@
 </template>
 
 <script>
+	// 微信授权登录对象
+	var aweixin = null;
+	// 当前环境支持的所有授权登录对象
+	var auths = {};
 	import {
 		mapMutations,
 		mapState
@@ -146,9 +152,27 @@
 				});
 			},
 			handleLive() {
-              uni.navigateTo({
-              	url:"../live/live"
-              })
+				uni.navigateTo({
+					url: "../live/live"
+				})
+			},
+			handlePusher(){
+				uni.navigateTo({
+					url: "../pusher/pusher"
+				})
+			},
+			handlechooseLogin() {
+				// 先获取所有服务
+				// 运行环境支持的登录授权认证服务列表数组，可通过services.length获取服务列表的数目。 如果当前运行环境没有支持的登录授权认证服务，则返回空数组。
+				plus.oauth.getServices(function(services) {
+					console.log(services);
+					for (var i in services) {
+						auths[service.id] = service;
+					}
+					aweixin = auths['weixin'];
+				}, function(e) {
+					plus.nativeUI.alert("获取登录授权服务列表失败：" + JSON.stringify(e));
+				});
 			},
 			...mapMutations(['login', 'loginout'])
 
